@@ -34,4 +34,7 @@ public class Asset {
     public void setOriginalCost(double originalCost) {
         this.originalCost = originalCost;
     }
+    public double value() {
+        return originalCost;
+    }
 }

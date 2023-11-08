@@ -1,16 +1,19 @@
 package com.pluralsight;
 
 public class House extends Asset{
+
     private  String address;
     private int condition, squareFoot, lotSize;
 
 
     public House(String dateAcquired, String description, double originalCost, String address, int condition, int squareFoot, int lotSize) {
+
         super(dateAcquired, description, originalCost);
         this.address = address;
         this.condition = condition;
         this.squareFoot = squareFoot;
         this.lotSize = lotSize;
+
     }
 
     public String getAddress() {
