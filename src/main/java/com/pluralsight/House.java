@@ -58,7 +58,21 @@ public class House extends Asset{
         this.lotSize = lotSize;
     }
     public double value() {
-        double value = (originalCost/squareFoot) + (.25 * lotSize);
+
+        switch (condition) {
+            case 1:
+                value = (180 * squareFoot) + .25 * lotSize;
+                break;
+            case 2:
+                value = (130 * squareFoot) + .25 * lotSize;
+                break;
+            case 3:
+                value = (90 * squareFoot) + .25 * lotSize;
+                break;
+            case 4:
+                value = (80 * squareFoot) + .25 * lotSize;
+                break;
+        }
         return value;
     }
 }

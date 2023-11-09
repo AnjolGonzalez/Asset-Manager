@@ -44,14 +44,14 @@ public class Vehicle extends Asset{
         double yearValue = yearNow - year;
 
         if (yearValue <= 3) {
-            double value = originalCost * .7;
+            double value = originalCost * (1-(0.03 * yearValue));
             if (!makeModel.contains("Volkswagon") && !makeModel.contains("Jeep") && odometer > 100000) {
                 return value * .75;
             }else {
                 return value;
             }
         } else if (yearValue > 3 && yearValue <= 6) {
-            double value = originalCost * .4;
+            double value = originalCost * (1-(0.06 * yearValue));
             if (!makeModel.contains("VolksWagon") && !makeModel.contains("Jeep") && odometer > 100000){
                 return value * .75;
             }else {
@@ -59,7 +59,7 @@ public class Vehicle extends Asset{
             }
         }
         else if (yearValue > 6 && yearValue <= 10) {
-            double value = originalCost * .2;
+            double value = originalCost * (1-(0.08 * yearValue));
             if (!makeModel.contains("Volkswagon") && !makeModel.contains("Jeep") && odometer > 100000){
                 return value * .75;
             }else {
